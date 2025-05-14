@@ -17,7 +17,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/dashboard', {
+        const response = await axios.get('https://ratingapp-7yax.onrender.com/api/dashboard/stats', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

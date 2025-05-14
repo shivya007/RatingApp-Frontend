@@ -18,7 +18,7 @@ export default function StoreDetails() {
   useEffect(() => {
     const fetchStore = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/stores/${id}`, {
+        const response = await axios.get(`https://ratingapp-7yax.onrender.com/api/stores/${id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -47,7 +47,7 @@ export default function StoreDetails() {
 
     try {
       await axios.post(
-        `http://localhost:5000/api/stores/${id}/ratings`,
+        `https://ratingapp-7yax.onrender.com/api/stores/${id}/ratings`,
         { rating, comment },
         {
           headers: {
@@ -57,7 +57,7 @@ export default function StoreDetails() {
       );
 
       // Refresh store data
-      const response = await axios.get(`http://localhost:5000/api/stores/${id}`, {
+      const response = await axios.get(`https://ratingapp-7yax.onrender.com/api/stores/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -78,7 +78,7 @@ export default function StoreDetails() {
     }
 
     try {
-      await axios.delete(`http://localhost:5000/api/stores/${id}`, {
+      await axios.delete(`https://ratingapp-7yax.onrender.com/api/stores/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

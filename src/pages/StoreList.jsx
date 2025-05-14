@@ -13,7 +13,7 @@ export default function StoreList() {
   useEffect(() => {
     const fetchStores = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/stores', {
+        const response = await axios.get('https://ratingapp-7yax.onrender.com/api/stores', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
